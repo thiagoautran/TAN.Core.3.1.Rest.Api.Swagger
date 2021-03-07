@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace TAN.Core._3._1.Rest.Api.Swagger.Controllers.v1
 {
+    [Produces("application/json")]
     [ApiVersion("1")]
     [ApiExplorerSettings(GroupName = "v1")]
     [ApiController]
     [Route("api/v{version:apiVersion}/contacts")]
-    [Produces("application/json")]
     public class ContactsController : ControllerBase
     {
         private readonly ILogger<ContactsController> _logger;
@@ -22,6 +22,19 @@ namespace TAN.Core._3._1.Rest.Api.Swagger.Controllers.v1
             _logger = logger;
         }
 
+        /// <summary>
+        /// Criar contato
+        /// </summary>
+        /// <remarks>
+        ///**Modelo de Dados** *(corpo da requisição, body)*
+        ///|Parâmetro|||Obrigatório|Tamanho|Descrição|
+        ///|---|---|---|:---:|---|---|
+        ///|**name**|||✔️|150|<span>Nome.</span>|
+        ///|**fone**|||❌||<span>Número</span><br/><span>Formato: 0 0000-0000.</span>|
+        /// </remarks>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        /// <response code="201">chave do contato</response>
         [HttpPost]
         [MapToApiVersion("1")]
         [ProducesResponseType(StatusCodes.Status201Created, Type = null)]

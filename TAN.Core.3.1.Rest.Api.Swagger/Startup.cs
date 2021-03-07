@@ -37,6 +37,8 @@ namespace TAN.Core._3._1.Rest.Api.Swagger
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

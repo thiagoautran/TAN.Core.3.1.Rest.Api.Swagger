@@ -55,8 +55,8 @@ namespace TAN.Core._3._1.Rest.Api.Swagger
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Contact V1");
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "Contact V2");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "V2");
                 c.RoutePrefix = "swagger";
 
                 c.InjectStylesheet("/css/custom_swagger.css");

@@ -20,15 +20,15 @@ namespace TAN.Core._3._1.Rest.Api.Swagger
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Contact Web API",
-                    Description = "Contact Web API",
+                    Title = "API Contatos",
+                    Description = "API de contatos - Versão: 1",
                 });
 
                 c.SwaggerDoc("v2", new OpenApiInfo
                 {
                     Version = "v2",
-                    Title = "Contact Web API",
-                    Description = "Contact Web API",
+                    Title = "API Contatos",
+                    Description = "API de contatos - Versão: 2",
                 });
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
